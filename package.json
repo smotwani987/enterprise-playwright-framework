@@ -17,6 +17,8 @@
   "homepage": "https://github.com/smotwani987/enterprise-playwright-framework#readme",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.7.0"
+    "@types/node": "^25.7.0",
+    "allure-playwright": "^3.8.0",
+    "typescript": "^6.0.3"
   }
 }
