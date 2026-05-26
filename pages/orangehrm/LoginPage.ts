@@ -21,6 +21,6 @@ export class LoginPage {
   }
   
   async navigate(){
-    await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    await this.page.goto('/');
   }
 }

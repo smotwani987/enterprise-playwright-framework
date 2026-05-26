@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-
+import { ENV } from './config/env';
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -19,7 +19,7 @@ export default defineConfig({
     headless:false,
       //trace: 'on-first-retry',
   viewport: { width: 1920, height: 1080 },
-
+    baseURL:ENV.BASE_URL,
   },
   
   projects: [
