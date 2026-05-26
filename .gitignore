@@ -14,7 +14,6 @@ server.pid
 *.eml
 /dist/
 .cache
-config/.env.*
 
 # Playwright
 node_modules/
