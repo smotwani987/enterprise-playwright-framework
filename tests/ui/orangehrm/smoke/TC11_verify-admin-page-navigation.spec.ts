@@ -1,10 +1,11 @@
+import { ENV } from 'config/env';
 import {test, expect} from '../../../../fixtures/baseFixture';
 
 test.describe('Admin Page Validations', () => {
     
     test.beforeEach(async ({poManager}) => {
         await poManager.LoginPage.navigate();
-        await poManager.LoginPage.login('Admin','admin123');
+        await poManager.LoginPage.login(ENV.USERNAME,ENV.PASSWORD);
     });
 
     test('@smoke TC04_Navigate_to_Admin page', async ({poManager})=>{
