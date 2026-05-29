@@ -1,30 +1,35 @@
 import { defineConfig, devices } from '@playwright/test';
-import { ENV } from './config/env';
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+import dotenv from 'dotenv';
+import path from 'path';
+
+const testEnv = process.env.TEST_ENV || 'qa';
+
+dotenv.config({
+  path: path.resolve(__dirname, `config/.env.${testEnv}`)
+});
+console.log('CONFIG BASE URL =>', process.env.BASE_URL);
 
 export default defineConfig({
   testDir: './tests',
-  fullyParallel: true,  
+  fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
   use: {
-    headless:false,
-      //trace: 'on-first-retry',
-  viewport: { width: 1920, height: 1080 },
-    baseURL:ENV.BASE_URL,
+    headless: false,
+    viewport: { width: 1920, height: 1080 },
+    baseURL: process.env.BASE_URL,
+    trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
   },
-  
+
   projects: [
     {
       name: 'chromium',
       //use: { ...devices['Desktop Chrome'] },
     }
-]});
+  ],
+  reporter: [['html'],['list']]
+
+});
