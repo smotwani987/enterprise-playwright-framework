@@ -16,7 +16,6 @@ test('@api TC00_Validate All API operations',async({apiContext})=>{
     console.log((await createdBookingInfo.json()));
 
     //Update Name and Amount
-    
     //Used createBookingPayload data factory object to update one value and reuse it as complete payload in line 22
     const updatedValues=createBookingPayload({totalprice:5000});
     const updateBookingResponse = await clientObj.updateBooking(bookingID,updatedValues);
