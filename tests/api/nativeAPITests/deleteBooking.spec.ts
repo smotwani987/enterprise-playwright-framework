@@ -41,7 +41,7 @@ const createResponse=await apiContext.post(
     const deleteResponse = await apiContext.delete(`https://restful-booker.herokuapp.com/booking/`+createdID,
         {
             headers: {
-               Cookie:'token=${token}'
+               Cookie:`token=${authtoken}`
             }
         });
     expect(await deleteResponse.status()).toBe(201);
