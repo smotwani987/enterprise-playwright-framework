@@ -1,6 +1,6 @@
 import {test, expect} from '../../../../fixtures/baseFixture';
 
-test.describe('OrangeHRM My Action Widget Visibility Test', () => {
+test.describe('@regression OrangeHRM My Action Widget Visibility Test', () => {
   test.beforeEach(async ({poManager}) => { 
     await poManager.LoginPage.navigate();
   });

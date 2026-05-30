@@ -1,6 +1,6 @@
 import {test,expect} from '../../../../fixtures/baseFixture';
 
-test.describe('Search Employee Tests',()=>{
+test.describe('@regression Search Employee Tests',()=>{
     test.beforeEach(async({poManager})=>{
         await poManager.LoginPage.navigate();
         await poManager.LoginPage.login('Admin','admin123');

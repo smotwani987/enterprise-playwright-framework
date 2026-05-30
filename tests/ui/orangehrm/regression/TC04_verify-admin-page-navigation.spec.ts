@@ -1,6 +1,6 @@
 import {test, expect} from '../../../../fixtures/baseFixture';
 
-test.describe('Admin Page Validations', () => {
+test.describe('@regression Admin Page Validations', () => {
     
     test.beforeEach(async ({poManager}) => {
         await poManager.LoginPage.navigate();

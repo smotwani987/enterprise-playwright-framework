@@ -1,6 +1,6 @@
 import {test} from '../../../../fixtures/baseFixture';
 
-test.describe('OrangeHRM Login Test', () => {
+test.describe('@regression OrangeHRM Login Test', () => {
   
   test.beforeEach(async ({ poManager }) => {
     await poManager.LoginPage.navigate();
