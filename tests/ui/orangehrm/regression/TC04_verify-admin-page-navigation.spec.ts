@@ -9,6 +9,7 @@ test.describe('Admin Page Validations', () => {
 
     test('@smoke TC04_Navigate_to_Admin page', async ({poManager})=>{
         expect (await poManager.DashboardPage.verifypageTitle()).toBeVisible();
+        expect (await poManager.AdminPage.navigateToAdminPage());
         expect (await poManager.AdminPage.verifyAdminPageTitle()).toBeVisible();
         expect (await poManager.AdminPage.triggerEmployeeSearch()).toBeVisible();
     });
