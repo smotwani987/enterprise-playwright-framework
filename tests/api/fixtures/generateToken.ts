@@ -1,4 +1,5 @@
 import { test as base, request } from '@playwright/test';
+import { AuthResponse } from '../interfaces/AuthResponse';
 
 type APIFixture = {
     apiContext: any;
@@ -21,8 +22,8 @@ export const test = base.extend<APIFixture>({
                 }
             }
         );
-
-        const authBody = await authResponse.json();
+        
+        const authBody:AuthResponse = await authResponse.json();
 
         const token = authBody.token;
 
@@ -44,8 +45,7 @@ export const test = base.extend<APIFixture>({
         // Cleanup
         await apiContext.dispose();
         await authContext.dispose();
-    }
-
+    },
 });
 
 export { expect } from '@playwright/test';
