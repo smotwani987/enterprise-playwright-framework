@@ -16,4 +16,15 @@ export class BasePage{
     await this.logoutLink.click();
     await this.page.waitForURL('**/login'); // Verify logout redirected successfully
   }
+   async getCurrentRoute(): Promise<string> {
+    return new URL(this.page.url()).pathname;
+}
+async navigateToIfNotAlreadyThere(
+    pageName: string,
+    urlFragment: string
+) {
+    if (!this.page.url().includes(urlFragment)) {
+        await this.page.getByRole('link', { name: pageName }).click();
+    }
+}
 }

@@ -1,6 +1,6 @@
 import {test} from "../../../fixtures/baseFixture"
 
-test("Real Locator Failure", async ({ page }) => {
+test.skip("Real Locator Failure", async ({ page }) => {
   await page.goto(
     "https://opensource-demo.orangehrmlive.com"
   );

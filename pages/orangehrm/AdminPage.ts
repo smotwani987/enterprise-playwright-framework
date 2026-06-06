@@ -1,13 +1,16 @@
 import { Locator, Page } from 'playwright';
+import { BasePage } from './BasePage';
 
 export class AdminPage {
   public userRoleDD: Locator;
   public adminDDValue: Locator;
   public searchBtn: Locator;
   public rows: Locator;
+  private basePage:BasePage;
 
   constructor(public page: Page) {
     this.page = page;
+    this.basePage=new BasePage(page);
     this.userRoleDD = this.page.locator(
       'xpath=//label[contains(normalize-space(.), "User Role")]/following::div[contains(@class, "oxd-select-text")][1]'
     );
@@ -17,10 +20,14 @@ export class AdminPage {
   }
 
   async navigateToAdminPage() {
-    const [adminClick] = await Promise.all([
-      this.page.locator('aside>>a').getByText('Admin').click(),
-      this.page.waitForURL('https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers'),
-    ]);
+    await this.basePage.navigateToIfNotAlreadyThere(
+      'Admin',
+      '/admin'
+    );
+    // const [adminClick] = await Promise.all([
+    //   this.page.locator('aside>>a').getByText('Admin').click(),
+    //   this.page.waitForURL('https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers'),
+    // ]);
   }
   async verifyAdminPageTitle() {
     await this.page.waitForLoadState('networkidle');

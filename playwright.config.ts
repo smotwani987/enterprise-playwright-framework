@@ -16,7 +16,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   use: {
-    headless: true,
+    headless: false,
     viewport: { width: 1920, height: 1080 },
     baseURL: process.env.BASE_URL,
     trace: 'on-first-retry',

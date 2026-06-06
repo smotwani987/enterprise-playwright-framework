@@ -1,14 +1,10 @@
-import {test} from '../../../../fixtures/baseFixture';
+import {test,expect} from '../../../../fixtures/baseFixture';
 
 test.describe('@regression OrangeHRM Login Test', () => {
-  
-  test.beforeEach(async ({ poManager }) => {
-    await poManager.LoginPage.navigate();
-  });
 
-  test('@smoke TC01 - Verify Login', async ({poManager}) => {
+  test('@smoke TC01 - Verify Logout', async ({poManager}) => {
     await poManager.LoginPage.login('Admin', 'admin123');
-    await poManager.DashboardPage.verifypageTitle();
+    expect (await poManager.DashboardPage.verifypageUrl()).toContain('/dashboard');
     await poManager.BasePage.logout();
   });
 });

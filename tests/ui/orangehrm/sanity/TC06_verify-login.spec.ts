@@ -1,14 +1,11 @@
-import {test,expect} from '../../../../fixtures/baseFixture';
 import { ENV } from '../../../../config/env';
+import {test,expect} from '../../../../fixtures/baseFixture';
 
-test.describe('@sanity OrangeHRM Login Test', () => {
-  
-  test.beforeEach(async ({ poManager }) => {
+test.describe('@regression OrangeHRM Login Test', () => {
+
+  test('@smokeTC01 - Verify Login', async ({poManager}) => {
     await poManager.LoginPage.navigate();
-  });
-
-  test('TC06 - Verify Login', async ({poManager}) => {
     await poManager.LoginPage.login(ENV.USERNAME, ENV.PASSWORD);
-    expect (await poManager.DashboardPage.verifypageTitle()).toBeVisible();
+    expect (await poManager.DashboardPage.verifypageUrl()).toContain('/dashboard');
   });
 });
