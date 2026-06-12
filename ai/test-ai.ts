@@ -1,5 +1,5 @@
 import { FailureAnalysisOrchestrator } from "./orchestrators/FailureAnalysisOrchestrator";
-import { LMStudioProvider } from "./providers/LMStudioProvider.ts";
+import { LMStudioProvider } from "./providers/LMStudioProvider.ts ";
 
 (async () => {
   const ai = new LMStudioProvider();

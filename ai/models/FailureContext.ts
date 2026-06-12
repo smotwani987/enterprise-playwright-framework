@@ -2,6 +2,6 @@ export interface FailureContext{
     testName: string,
     errorMessage : string,
     stackTrace?:string
-    specFiler?: string,
+    specFile?: string,
     browser?:string
 };

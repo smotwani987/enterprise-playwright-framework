@@ -14,5 +14,5 @@
     "baseUrl": ".",
     "ignoreDeprecations": "6.0"
   },
-  "include": ["tests", "fixtures", "pages", "helpers", "playwright.config.ts"]
+  "include": ["tests", "fixtures", "pages", "helpers", "ai", "playwright.config.ts", "types/test-rag.spec.ts"]
 }

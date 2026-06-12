@@ -28,8 +28,7 @@ export class LMStudioProvider {
 
       console.log("LM Studio response received");
 
-      const content =
-        response.choices[0].message.content ?? "";
+      const content = response.choices[0].message.content ?? "";
 
       console.log("========== AI RESPONSE ==========");
       console.log(content);

@@ -1,0 +1,7 @@
+[
+  {
+    "pattern": "Test timeout exceeded",
+    "rootCause": "Long-running operation",
+    "fix": "Investigate waits, locators, and application response times"
+  }
+]

@@ -1,26 +1,35 @@
 import { FailureContext } from "../models/FailureContext";
 
 export const buildFailurePrompt = (
-  context: FailureContext
-): string => `
-Do not use <think> tags.
-Do not show reasoning.
-Provide only the final answer.
+  context: FailureContext, knowledge:string): string => `
+You are a Playwright automation expert.
 
-Playwright Failure:
+Known QA Knowledge:
 
-Test: ${context.testName}
+${knowledge}
+
+Analyze this test failure.
+
+Test:
+${context.testName}
 
 Error:
 ${context.errorMessage}
 
-Format:
+Return ONLY valid JSON.
 
-Root Cause:
-<one sentence>
+Example:
 
-Fix:
-<one sentence>
+{
+  "rootCause": "Locator not found",
+  "fix": "Verify selector",
+  "confidence": 95
+}
 
-Maximum 50 words.
+Rules:
+- Return JSON only
+- No markdown
+- No explanations
+- No think tags
+- Confidence must be a number between 0 and 100
 `;

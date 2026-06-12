@@ -1,0 +1,7 @@
+[
+  {
+    "pattern": "Expected status 200",
+    "rootCause": "API returned unexpected status",
+    "fix": "Review backend logs"
+  }
+]
