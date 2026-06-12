@@ -1,0 +1,12 @@
+[
+  {
+    "pattern": "Locator not found",
+    "rootCause": "Invalid locator",
+    "fix": "Verify selector exists"
+  },
+  {
+    "pattern": "waiting for locator",
+    "rootCause": "Element unavailable",
+    "fix": "Wait for element or verify locator"
+  }
+]

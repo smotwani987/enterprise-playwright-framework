@@ -1,5 +1,6 @@
 import {test as base,BrowserContext, Page} from '@playwright/test';
 import {POManager} from '../pages/orangehrm/POManager';
+import { AIFailureAnalyzer } from '../helpers/AIFailureAnalyzer';
 
 type myFixtures={
 context: BrowserContext;
@@ -14,7 +15,7 @@ export const test=base.extend<myFixtures>({
       ignoreHTTPSErrors: true
     })
     await use(context);
-    await context.close;
+    await context.close();
   },
 
   page:async({context},use)=>{
@@ -27,5 +28,13 @@ export const test=base.extend<myFixtures>({
     await use(poManager);
   }
 
+});
+
+test.afterEach(async ({},testinfo)=>{
+  try{
+    await AIFailureAnalyzer.analyze(testinfo);
+  }catch (error) {
+      console.error("AI Analysis Failed: ",error);
+  }
 });
 export { expect } from '@playwright/test';
