@@ -1,6 +1,6 @@
 import {test as base,BrowserContext, Page} from '@playwright/test';
 import {POManager} from '../pages/orangehrm/POManager';
-import { AIFailureAnalyzer } from '../helpers/AIFailureAnalyzer';
+import { AIFailureAnalyzer } from '../ai/analyzer/AIFailureAnalyzer';
 
 type myFixtures={
 context: BrowserContext;

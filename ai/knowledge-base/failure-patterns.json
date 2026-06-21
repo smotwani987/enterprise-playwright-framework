@@ -1,0 +1,62 @@
+[
+  {
+    "keywords": [
+      "navigation to finish",
+      "waiting for navigation",
+      "auth/validate"
+    ],
+    "category": "TIMEOUT_FAILURE",
+    "rootCause": "Page navigation did not complete before the test attempted validation or interaction.",
+    "confidence": 85,
+    "suggestedFixes": [
+      "Wait for page navigation to complete before interacting with elements",
+      "Use page.waitForURL() for expected route changes",
+      "Avoid asserting dashboard elements immediately after login submit"
+    ]
+  },
+  {
+    "keywords": [
+      "context or browser has been closed",
+      "browser has been closed",
+      "page has been closed",
+      "target page"
+    ],
+    "category": "TIMEOUT_FAILURE",
+    "rootCause": "Browser page or context was closed before the pending Playwright action completed.",
+    "confidence": 80,
+    "suggestedFixes": [
+      "Check fixture cleanup timing",
+      "Ensure context.close() is awaited only after test execution completes",
+      "Avoid pending actions after test timeout"
+    ]
+  },
+  {
+    "keywords": [
+      "element(s) not found",
+      "toBeVisible",
+      "locator"
+    ],
+    "category": "LOCATOR_FAILURE",
+    "rootCause": "Expected UI element was not found or not visible at the time of assertion.",
+    "confidence": 85,
+    "suggestedFixes": [
+      "Validate locator correctness",
+      "Check whether the page is fully loaded before assertion",
+      "Prefer stable role-based or test-id based locators"
+    ]
+  },
+  {
+    "keywords": [
+      "expect(received).toBeTruthy",
+      "received: false"
+    ],
+    "category": "ASSERTION_FAILURE",
+    "rootCause": "Assertion failed because the expected truthy condition evaluated to false.",
+    "confidence": 80,
+    "suggestedFixes": [
+      "Verify API response or UI state before assertion",
+      "Check test data used for this scenario",
+      "Confirm the expected condition is still valid"
+    ]
+  }
+]

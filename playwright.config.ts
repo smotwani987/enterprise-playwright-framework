@@ -3,6 +3,15 @@ import dotenv from 'dotenv';
 import path from 'path';
 
 const testEnv = process.env.TEST_ENV || 'qa';
+const now=new Date();
+const formatter = new Intl.DateTimeFormat('en-IN', {
+  timeZone: 'Asia/Kolkata',
+  year: 'numeric', month: '2-digit', day: '2-digit',
+  hour: '2-digit', minute: '2-digit', second: '2-digit',
+  hour12: false
+});
+const [{ value: dd },, { value: mm },, { value: yyyy },, { value: hh },, { value: min },, { value: ss }] = formatter.formatToParts(now);
+const timestamp = `${yyyy}-${mm}-${dd}_${hh}-${min}-${ss}`;
 
 dotenv.config({
   path: path.resolve(__dirname, `config/.env.${testEnv}`)
@@ -30,6 +39,5 @@ export default defineConfig({
       //use: { ...devices['Desktop Chrome'] },
     }
   ],
-  reporter: [['html'],['list']]
-
+  reporter: [['html'],['list'],['json',{ outputFile: `reports/json/EPF_Report_${timestamp}.json` }]]
 });

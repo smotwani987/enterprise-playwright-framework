@@ -1,5 +1,5 @@
 import { TestInfo } from "@playwright/test";
-import { FailureAnalysisOrchestrator } from "../ai/orchestrators/FailureAnalysisOrchestrator";
+import { FailureAnalysisOrchestrator } from "../orchestrators/FailureAnalysisOrchestrator";
 import fs from "fs/promises";
 
 //console.log("PWD:", process.cwd());

@@ -1,0 +1,86 @@
+[
+  {
+    "testName": "@api Get Booking Details",
+    "category": "ASSERTION_FAILURE",
+    "errorSignature": "@api Get Booking Details::ASSERTION_FAILURE::Actual result does not match expected result.",
+    "rootCause": "Actual result does not match expected result.",
+    "suggestedFixes": [
+      "Verify test data",
+      "Verify expected result",
+      "Validate API/UI response before assertion"
+    ],
+    "occurrenceCount": 6,
+    "firstSeen": "2026-06-21T12:25:10.874Z",
+    "lastSeen": "2026-06-21T12:47:43.685Z"
+  },
+  {
+    "testName": "Real Locator Failure",
+    "category": "TIMEOUT_FAILURE",
+    "errorSignature": "Real Locator Failure::TIMEOUT_FAILURE::Execution exceeded configured timeout.",
+    "rootCause": "Execution exceeded configured timeout.",
+    "suggestedFixes": [
+      "Review wait strategy",
+      "Review navigation timing",
+      "Investigate slow application response"
+    ],
+    "occurrenceCount": 7,
+    "firstSeen": "2026-06-21T12:25:10.875Z",
+    "lastSeen": "2026-06-21T12:48:25.042Z"
+  },
+  {
+    "testName": "@smoke TC03 - Verify My Action Widget Visibility",
+    "category": "LOCATOR_FAILURE",
+    "errorSignature": "@smoke TC03 - Verify My Action Widget Visibility::LOCATOR_FAILURE::Expected UI element was not found or not visible at the time of assertion.",
+    "rootCause": "Expected UI element was not found or not visible at the time of assertion.",
+    "suggestedFixes": [
+      "Validate locator correctness",
+      "Check whether the page is fully loaded before assertion",
+      "Prefer stable role-based or test-id based locators"
+    ],
+    "occurrenceCount": 7,
+    "firstSeen": "2026-06-21T12:25:10.875Z",
+    "lastSeen": "2026-06-21T12:48:25.042Z"
+  },
+  {
+    "testName": "TC07 - Verify Logout",
+    "category": "TIMEOUT_FAILURE",
+    "errorSignature": "TC07 - Verify Logout::TIMEOUT_FAILURE::Execution exceeded configured timeout.",
+    "rootCause": "Execution exceeded configured timeout.",
+    "suggestedFixes": [
+      "Review wait strategy",
+      "Review navigation timing",
+      "Investigate slow application response"
+    ],
+    "occurrenceCount": 7,
+    "firstSeen": "2026-06-21T12:25:10.875Z",
+    "lastSeen": "2026-06-21T12:48:25.042Z"
+  },
+  {
+    "testName": "TC10 - Verify My Action Widget Visibility",
+    "category": "LOCATOR_FAILURE",
+    "errorSignature": "TC10 - Verify My Action Widget Visibility::LOCATOR_FAILURE::Page navigation did not complete before the test attempted validation or interaction.",
+    "rootCause": "Page navigation did not complete before the test attempted validation or interaction.",
+    "suggestedFixes": [
+      "Wait for page navigation to complete before interacting with elements",
+      "Use page.waitForURL() for expected route changes",
+      "Avoid asserting dashboard elements immediately after login submit"
+    ],
+    "occurrenceCount": 7,
+    "firstSeen": "2026-06-21T12:25:10.875Z",
+    "lastSeen": "2026-06-21T12:48:25.042Z"
+  },
+  {
+    "testName": "@api Get Booking Details",
+    "category": "ASSERTION_FAILURE",
+    "errorSignature": "@api Get Booking Details::ASSERTION_FAILURE::Assertion failed because the expected truthy condition evaluated to false.",
+    "rootCause": "Assertion failed because the expected truthy condition evaluated to false.",
+    "suggestedFixes": [
+      "Verify API response or UI state before assertion",
+      "Check test data used for this scenario",
+      "Confirm the expected condition is still valid"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-06-21T12:48:25.041Z",
+    "lastSeen": "2026-06-21T12:48:25.041Z"
+  }
+]
