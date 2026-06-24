@@ -2,8 +2,7 @@ import { Agent } from "./Agent";
 import { FailureTest } from "../models/FailureTest";
 import { PlaywrightReportReaderTool } from "../tools/PlaywrightReportReaderTool";
 
-export class ReportReaderAgent
-    implements Agent<string, FailureTest[]> {
+export class ReportReaderAgent implements Agent<string, FailureTest[]> {
 
     name = "ReportReaderAgent";
 

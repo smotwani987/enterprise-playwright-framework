@@ -23,9 +23,9 @@
       "Review navigation timing",
       "Investigate slow application response"
     ],
-    "occurrenceCount": 7,
+    "occurrenceCount": 12,
     "firstSeen": "2026-06-21T12:25:10.875Z",
-    "lastSeen": "2026-06-21T12:48:25.042Z"
+    "lastSeen": "2026-06-23T11:58:19.195Z"
   },
   {
     "testName": "@smoke TC03 - Verify My Action Widget Visibility",
@@ -37,9 +37,9 @@
       "Check whether the page is fully loaded before assertion",
       "Prefer stable role-based or test-id based locators"
     ],
-    "occurrenceCount": 7,
+    "occurrenceCount": 12,
     "firstSeen": "2026-06-21T12:25:10.875Z",
-    "lastSeen": "2026-06-21T12:48:25.042Z"
+    "lastSeen": "2026-06-23T11:58:19.195Z"
   },
   {
     "testName": "TC07 - Verify Logout",
@@ -51,9 +51,9 @@
       "Review navigation timing",
       "Investigate slow application response"
     ],
-    "occurrenceCount": 7,
+    "occurrenceCount": 12,
     "firstSeen": "2026-06-21T12:25:10.875Z",
-    "lastSeen": "2026-06-21T12:48:25.042Z"
+    "lastSeen": "2026-06-23T11:58:19.195Z"
   },
   {
     "testName": "TC10 - Verify My Action Widget Visibility",
@@ -65,9 +65,9 @@
       "Use page.waitForURL() for expected route changes",
       "Avoid asserting dashboard elements immediately after login submit"
     ],
-    "occurrenceCount": 7,
+    "occurrenceCount": 12,
     "firstSeen": "2026-06-21T12:25:10.875Z",
-    "lastSeen": "2026-06-21T12:48:25.042Z"
+    "lastSeen": "2026-06-23T11:58:19.195Z"
   },
   {
     "testName": "@api Get Booking Details",
@@ -79,8 +79,8 @@
       "Check test data used for this scenario",
       "Confirm the expected condition is still valid"
     ],
-    "occurrenceCount": 1,
+    "occurrenceCount": 6,
     "firstSeen": "2026-06-21T12:48:25.041Z",
-    "lastSeen": "2026-06-21T12:48:25.041Z"
+    "lastSeen": "2026-06-23T11:58:19.195Z"
   }
 ]

@@ -1,33 +1,29 @@
-import { PlaywrightReportReaderTool } from "../tools/PlaywrightReportReaderTool";
-import { FailureClassificationTool } from "../tools/FailureClassificationTool";
-import { FailureAnalysisTool } from "../tools/FailureAnalysisTool";
-import { HtmlFailureReportGeneratorTool } from "../tools/HtmlFailureReportGeneratorTool";
 import { FailureAnalysisReport } from "../models/FailureAnalysisReport";
-import { FailureMemoryStore } from "../memory/FailureMemoryStore";
+
+import { ReportGeneratorAgent } from "../agents/ReportGeneratorAgent";
+import { MemoryAgent } from "../agents/MemoryAgent";
+import { ReportReaderAgent } from "../agents/ReportReaderAgent";
+import { FailureClassifierAgent } from "ai/agents/FailureClassifierAgent";
+import { FailureAnalyzerAgent } from "ai/agents/FailureAnalyzerAgent";
 
 export class AIFailureReportOrchestrator {
 
-    private readonly reportReaderTool: PlaywrightReportReaderTool;
-    private readonly classificationTool: FailureClassificationTool;
-    private readonly analysisTool: FailureAnalysisTool;
-    private readonly htmlReportGeneratorTool: HtmlFailureReportGeneratorTool;
-    private readonly failureMemoryStore: FailureMemoryStore;
+    private readonly reportReaderAgent: ReportReaderAgent;
+    private readonly failureClassifierAgent:FailureClassifierAgent;
+    private readonly failureAnalyzerAgent:FailureAnalyzerAgent;
+    private readonly reportGeneratorAgent: ReportGeneratorAgent;
+    private readonly memoryAgent: MemoryAgent;
 
     constructor() {
-        this.reportReaderTool =
-            new PlaywrightReportReaderTool();
+        this.reportReaderAgent = new ReportReaderAgent();
 
-        this.classificationTool =
-            new FailureClassificationTool();
+        this.failureClassifierAgent=new FailureClassifierAgent();
 
-        this.analysisTool =
-            new FailureAnalysisTool();
+        this.failureAnalyzerAgent=new FailureAnalyzerAgent();
 
-        this.htmlReportGeneratorTool =
-            new HtmlFailureReportGeneratorTool();
+        this.reportGeneratorAgent=new ReportGeneratorAgent();
 
-        this.failureMemoryStore =
-            new FailureMemoryStore();
+        this.memoryAgent = new MemoryAgent();
     }
 
     async generate(
@@ -35,22 +31,18 @@ export class AIFailureReportOrchestrator {
         outputPath: string
     ): Promise<void> {
 
-        const failedTests =
-            await this.reportReaderTool.execute(reportPath);
+        const failedTests = await this.reportReaderAgent.execute(reportPath);
 
-        console.log(
-            `Found ${failedTests.length} failed tests`
-        );
+        console.log(`Found ${failedTests.length} failed tests`);
 
         const analysisReports: FailureAnalysisReport[] = [];
 
         for (const test of failedTests) {
 
-            const category =
-                await this.classificationTool.execute(test);
+            const category = await this.failureClassifierAgent.execute(test);
 
             const analysis =
-                await this.analysisTool.execute({
+                await this.failureAnalyzerAgent.execute({
                     failureTest: test,
                     category
                 });
@@ -72,8 +64,7 @@ export class AIFailureReportOrchestrator {
                 originalFailure: test
             };
 
-            const memoryMatch =
-                this.failureMemoryStore.findMatchingMemory(currentReport);
+            const memoryMatch = this.memoryAgent.findMatchingMemory(currentReport);
 
             currentReport.memoryMatch =
                 memoryMatch;
@@ -81,18 +72,15 @@ export class AIFailureReportOrchestrator {
             analysisReports.push(currentReport);
         }
 
-        await this.htmlReportGeneratorTool.execute({
-            reports: analysisReports,
-            outputPath
-        });
+        await this.reportGeneratorAgent.execute({reports: analysisReports,
+            outputPath});
+
         console.log(
             `AI HTML report generated: ${outputPath}`
         );
 
 
-        this.failureMemoryStore.updateMemory(
-            analysisReports
-        );
+        this.memoryAgent.updateMemory(analysisReports);
 
         console.log(
             "Failure memory updated: ai/memory/failure-memory.json"
