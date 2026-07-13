@@ -1,0 +1,64 @@
+name: AWS Playwright Regression
+
+on:
+  workflow_dispatch:
+    inputs:
+      testTag:
+        description: "Tag to run"
+        required: true
+        default: "@smoke"
+      environment:
+        description: "Environment"
+        required: true
+        default: "qa"
+
+  schedule:
+    - cron: "30 20 */2 * *"
+
+jobs:
+  playwright-tests:
+    timeout-minutes: 60
+    runs-on: self-hosted
+
+    env:
+      ENV: ${{ github.event.inputs.environment || 'qa' }}
+      TEST_TAG: ${{ github.event.inputs.testTag || '@smoke' }}
+      CI: true
+      HEADLESS: true
+      QA_BASE_URL: ${{ secrets.QA_BASE_URL }}
+      QA_USERNAME: ${{ secrets.QA_USERNAME }}
+      QA_PASSWORD: ${{ secrets.QA_PASSWORD }}
+
+    steps:
+      - name: Checkout framework
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Playwright tests
+        run: npx playwright test --grep "$TEST_TAG" --project=chromium --workers=1
+
+      - name: Upload Playwright HTML Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-html-report
+          path: playwright-report/
+          retention-days: 30
+
+      - name: Upload Screenshots Traces Videos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-test-results
+          path: test-results/
+          retention-days: 30
