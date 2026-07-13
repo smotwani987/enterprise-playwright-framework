@@ -8,7 +8,7 @@
     "test:dev": "TEST_ENV=dev npx playwright test",
     "ai:test": "tsx ai/test-ai.ts",
     "ai:failure-report": "tsx ai/runner/generate-ai-failure-report.ts",
-    "AzureExecution":"npx playwright test TEST_ENV=qa --config=playwright.service.config.ts --workers=5"
+    "AzureExecution": "npx playwright test TEST_ENV=qa --config=playwright.service.config.ts --workers=5"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
   "devDependencies": {
     "@azure/identity": "^4.13.1",
     "@azure/playwright": "^1.1.6",
-    "@playwright/test": "^1.60.0",
+    "@playwright/test": "^1.61.1",
     "@types/node": "^25.9.2",
     "allure-playwright": "^3.8.0",
     "tsx": "^4.22.4",
