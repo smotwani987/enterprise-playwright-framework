@@ -24,7 +24,10 @@ async navigateToIfNotAlreadyThere(
     urlFragment: string
 ) {
     if (!this.page.url().includes(urlFragment)) {
+        console.log("Let's Navigate to Dashboard Page First!");
         await this.page.getByRole('link', { name: pageName }).click();
+        await this.page.url().endsWith(`${urlFragment}/index`);
+        console.log("Target Page Navigation Complete");
     }
 }
 }

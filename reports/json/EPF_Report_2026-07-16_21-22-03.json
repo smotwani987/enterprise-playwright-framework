@@ -1,0 +1,170 @@
+{
+  "config": {
+    "argv": [
+      "/Users/sahilmotwani/.nvm/versions/node/v22.22.2/bin/node",
+      "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/ui/orangehrm/smoke/TC10_verify-my-action-widget-visibility.spec.ts"
+    ],
+    "configFile": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/playwright.config.ts",
+    "rootDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/json/EPF_Report_2026-07-16_21-22-03.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 7,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "ui/orangehrm/smoke/TC10_verify-my-action-widget-visibility.spec.ts",
+      "file": "ui/orangehrm/smoke/TC10_verify-my-action-widget-visibility.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@smoke OrangeHRM My Action Widget Visibility Test",
+          "file": "ui/orangehrm/smoke/TC10_verify-my-action-widget-visibility.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC10 - Verify My Action Widget Visibility",
+              "ok": false,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 4085,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('region', { name: 'My Actions' })\nExpected: visible\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('region', { name: 'My Actions' })\u001b[22m\n\u001b[2m    - waiting for\" https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('region', { name: 'My Actions' })\nExpected: visible\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('region', { name: 'My Actions' })\u001b[22m\n\u001b[2m    - waiting for\" https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\"\u001b[22m\n\n    at /Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/ui/orangehrm/smoke/TC10_verify-my-action-widget-visibility.spec.ts:9:65",
+                        "location": {
+                          "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/ui/orangehrm/smoke/TC10_verify-my-action-widget-visibility.spec.ts",
+                          "column": 65,
+                          "line": 9
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  7 |\u001b[39m   \u001b[36mawait\u001b[39m poManager\u001b[33m.\u001b[39m\u001b[33mLoginPage\u001b[39m\u001b[33m.\u001b[39mnavigate()\u001b[33m;\u001b[39m\n \u001b[90m  8 |\u001b[39m       \u001b[36mawait\u001b[39m poManager\u001b[33m.\u001b[39m\u001b[33mLoginPage\u001b[39m\u001b[33m.\u001b[39mlogin(\u001b[33mENV\u001b[39m\u001b[33m.\u001b[39m\u001b[33mUSERNAME\u001b[39m\u001b[33m,\u001b[39m \u001b[33mENV\u001b[39m\u001b[33m.\u001b[39m\u001b[33mPASSWORD\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   expect (\u001b[36mawait\u001b[39m poManager\u001b[33m.\u001b[39m\u001b[33mDashboardPage\u001b[39m\u001b[33m.\u001b[39mverifyMyActionWidget())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/ui/orangehrm/smoke/TC10_verify-my-action-widget-visibility.spec.ts",
+                            "column": 65,
+                            "line": 9
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('region', { name: 'My Actions' })\nExpected: visible\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('region', { name: 'My Actions' })\u001b[22m\n\u001b[2m    - waiting for\" https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  7 |\u001b[39m   \u001b[36mawait\u001b[39m poManager\u001b[33m.\u001b[39m\u001b[33mLoginPage\u001b[39m\u001b[33m.\u001b[39mnavigate()\u001b[33m;\u001b[39m\n \u001b[90m  8 |\u001b[39m       \u001b[36mawait\u001b[39m poManager\u001b[33m.\u001b[39m\u001b[33mLoginPage\u001b[39m\u001b[33m.\u001b[39mlogin(\u001b[33mENV\u001b[39m\u001b[33m.\u001b[39m\u001b[33mUSERNAME\u001b[39m\u001b[33m,\u001b[39m \u001b[33mENV\u001b[39m\u001b[33m.\u001b[39m\u001b[33mPASSWORD\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   expect (\u001b[36mawait\u001b[39m poManager\u001b[33m.\u001b[39m\u001b[33mDashboardPage\u001b[39m\u001b[33m.\u001b[39mverifyMyActionWidget())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/ui/orangehrm/smoke/TC10_verify-my-action-widget-visibility.spec.ts:9:65\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-16T15:52:03.389Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results/ui-orangehrm-smoke-TC10_ve-28010-My-Action-Widget-Visibility-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results/ui-orangehrm-smoke-TC10_ve-28010-My-Action-Widget-Visibility-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/ui/orangehrm/smoke/TC10_verify-my-action-widget-visibility.spec.ts",
+                        "column": 65,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9cd0476e76be116dfe8f-4583dfeb89378de78aca",
+              "file": "ui/orangehrm/smoke/TC10_verify-my-action-widget-visibility.spec.ts",
+              "line": 6,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-16T15:52:03.192Z",
+    "duration": 5035.5109999999995,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

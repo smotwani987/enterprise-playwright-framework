@@ -1,0 +1,156 @@
+{
+  "config": {
+    "argv": [
+      "/Users/sahilmotwani/.nvm/versions/node/v22.22.2/bin/node",
+      "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/api/nativeAPITests/getBooking.spec.ts"
+    ],
+    "configFile": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/playwright.config.ts",
+    "rootDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/json/EPF_Report_2026-07-16_22-10-18.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 7,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api/nativeAPITests/getBooking.spec.ts",
+      "file": "api/nativeAPITests/getBooking.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@api Get Booking Details",
+          "ok": false,
+          "tags": [
+            "api"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1550,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/api/nativeAPITests/getBooking.spec.ts:6:25",
+                    "location": {
+                      "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/api/nativeAPITests/getBooking.spec.ts",
+                      "column": 25,
+                      "line": 6
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m   \u001b[36mconst\u001b[39m apiContext \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mnewContext()\u001b[33m;\u001b[39m\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m apiContext\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://restful-booker.herokuapp.com/booking/1'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   expect(body)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m'firstname'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/api/nativeAPITests/getBooking.spec.ts",
+                        "column": 25,
+                        "line": 6
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 4 |\u001b[39m   \u001b[36mconst\u001b[39m apiContext \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mnewContext()\u001b[33m;\u001b[39m\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m apiContext\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://restful-booker.herokuapp.com/booking/1'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   expect(body)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m'firstname'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/api/nativeAPITests/getBooking.spec.ts:6:25\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-16T16:40:18.191Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results/api-nativeAPITests-getBooking--api-Get-Booking-Details-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/api/nativeAPITests/getBooking.spec.ts",
+                    "column": 25,
+                    "line": 6
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "4823a57a408d9130c2ae-5f289872eeac934fe4a9",
+          "file": "api/nativeAPITests/getBooking.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-16T16:40:18.023Z",
+    "duration": 1746.23,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

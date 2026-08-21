@@ -19,13 +19,15 @@ dotenv.config({
 console.log('CONFIG BASE URL =>', process.env.BASE_URL);
 
 export default defineConfig({
+  globalSetup: './auth/auth.setup.ts',
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   use: {
-    headless: true,
+    headless: false,
+    storageState: './auth/storageState.json',
     viewport: { width: 1920, height: 1080 },
     baseURL: process.env.BASE_URL,
     trace: 'on-first-retry',

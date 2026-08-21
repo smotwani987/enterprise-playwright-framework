@@ -2,8 +2,7 @@ import { AIFailureReportOrchestrator } from "../orchestrators/AIFailureReportOrc
 
 (async () => {
 
-    const reportPath =
-        process.argv[2];
+    const reportPath = process.argv[2];
 
     if (!reportPath) {
         throw new Error(

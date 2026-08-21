@@ -22,5 +22,6 @@ export class LoginPage {
   
   async navigate(){
     await this.page.goto('/');
+    //await this.page.waitForURL('/');
   }
 }

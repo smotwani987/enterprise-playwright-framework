@@ -1,0 +1,82 @@
+{
+  "config": {
+    "argv": [
+      "/Users/sahilmotwani/.nvm/versions/node/v22.22.2/bin/node",
+      "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/ui/orangehrm/regression/TC10_verify-my-action-widget-visibility.spec.ts"
+    ],
+    "configFile": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/playwright.config.ts",
+    "rootDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/json/EPF_Report_2026-07-16_21-21-40.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 7,
+    "webServer": null
+  },
+  "suites": [],
+  "errors": [
+    {
+      "message": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments.",
+      "stack": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments."
+    }
+  ],
+  "stats": {
+    "startTime": "2026-07-16T15:51:40.836Z",
+    "duration": 5.703999999999979,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

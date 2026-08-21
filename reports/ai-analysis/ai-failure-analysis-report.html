@@ -144,13 +144,13 @@
 
         
                 <div class="summary-card">
-                    <h2>1</h2>
-                    <p>ASSERTION_FAILURE</p>
+                    <h2>2</h2>
+                    <p>UNKNOWN_FAILURE</p>
                 </div>
             
 
                 <div class="summary-card">
-                    <h2>2</h2>
+                    <h2>1</h2>
                     <p>TIMEOUT_FAILURE</p>
                 </div>
             
@@ -166,41 +166,35 @@
 <div class="failure-card">
 
     <div class="failure-title">
-        @api Get Booking Details
+        RAG Retrieval Test
     </div>
 
     <div class="meta">
         <span class="badge">Status: failed</span>
-        <span class="badge category">ASSERTION_FAILURE</span>
-        <span class="badge confidence">Confidence: 80%</span>
-        <span class="badge">Duration: 1374 ms</span>
+        <span class="badge category">UNKNOWN_FAILURE</span>
+        <span class="badge confidence">Confidence: 40%</span>
+        <span class="badge">Duration: 3 ms</span>
     </div>
     
 <div class="root-cause">
     <strong>Recurring Failure:</strong>
-    <p>Yes. This failure has been seen before.</p>
-    <p><strong>Previous Occurrences:</strong> 5</p>
-    <p><strong>First Seen:</strong> 2026-06-21T12:48:25.041Z</p>
-    <p><strong>Last Seen:</strong> 2026-06-23T11:54:56.447Z</p>
+    <p>No. This looks like a new failure pattern.</p>
 </div>
-    
+        
     <div class="root-cause">
         <strong>Root Cause:</strong>
-        <p>Assertion failed because the expected truthy condition evaluated to false.</p>
+        <p>Unable to determine root cause.</p>
     </div>
 
     <strong>Suggested Fixes:</strong>
     <ul>
-        <li>Verify API response or UI state before assertion</li>
-<li>Check test data used for this scenario</li>
-<li>Confirm the expected condition is still valid</li>
+        <li>Manual investigation required</li>
+<li>Add more failure patterns</li>
     </ul>
 
     <strong>Error Message:</strong>
     <div class="error">
-Error: expect(received).toBeTruthy()
-
-Received: false
+TypeError: Cannot read properties of undefined (reading &#039;toLowerCase&#039;)
     </div>
 
 </div>
@@ -216,15 +210,15 @@ Received: false
         <span class="badge">Status: timedOut</span>
         <span class="badge category">TIMEOUT_FAILURE</span>
         <span class="badge confidence">Confidence: 65%</span>
-        <span class="badge">Duration: 31622 ms</span>
+        <span class="badge">Duration: 32136 ms</span>
     </div>
     
 <div class="root-cause">
     <strong>Recurring Failure:</strong>
     <p>Yes. This failure has been seen before.</p>
-    <p><strong>Previous Occurrences:</strong> 11</p>
+    <p><strong>Previous Occurrences:</strong> 12</p>
     <p><strong>First Seen:</strong> 2026-06-21T12:25:10.875Z</p>
-    <p><strong>Last Seen:</strong> 2026-06-23T11:54:56.447Z</p>
+    <p><strong>Last Seen:</strong> 2026-06-23T11:58:19.195Z</p>
 </div>
     
     <div class="root-cause">
@@ -257,27 +251,24 @@ Test timeout of 30000ms exceeded.
         <span class="badge">Status: failed</span>
         <span class="badge category">LOCATOR_FAILURE</span>
         <span class="badge confidence">Confidence: 85%</span>
-        <span class="badge">Duration: 5771 ms</span>
+        <span class="badge">Duration: 8500 ms</span>
     </div>
     
 <div class="root-cause">
     <strong>Recurring Failure:</strong>
-    <p>Yes. This failure has been seen before.</p>
-    <p><strong>Previous Occurrences:</strong> 11</p>
-    <p><strong>First Seen:</strong> 2026-06-21T12:25:10.875Z</p>
-    <p><strong>Last Seen:</strong> 2026-06-23T11:54:56.447Z</p>
+    <p>No. This looks like a new failure pattern.</p>
 </div>
-    
+        
     <div class="root-cause">
         <strong>Root Cause:</strong>
-        <p>Expected UI element was not found or not visible at the time of assertion.</p>
+        <p>Page navigation did not complete before the test attempted validation or interaction.</p>
     </div>
 
     <strong>Suggested Fixes:</strong>
     <ul>
-        <li>Validate locator correctness</li>
-<li>Check whether the page is fully loaded before assertion</li>
-<li>Prefer stable role-based or test-id based locators</li>
+        <li>Wait for page navigation to complete before interacting with elements</li>
+<li>Use page.waitForURL() for expected route changes</li>
+<li>Avoid asserting dashboard elements immediately after login submit</li>
     </ul>
 
     <strong>Error Message:</strong>
@@ -291,6 +282,8 @@ Error: element(s) not found
 Call log:
   - Expect &quot;toBeVisible&quot; with timeout 5000ms
   - waiting for getByRole(&#039;region&#039;, { name: &#039;My Actions&#039; })
+    - waiting for&quot; https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index&quot; navigation to finish...
+    - navigated to &quot;https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index&quot;
 
     </div>
 
@@ -300,39 +293,38 @@ Call log:
 <div class="failure-card">
 
     <div class="failure-title">
-        TC07 - Verify Logout
+        @smoke TC05_Search_Employee
     </div>
 
     <div class="meta">
-        <span class="badge">Status: timedOut</span>
-        <span class="badge category">TIMEOUT_FAILURE</span>
-        <span class="badge confidence">Confidence: 65%</span>
-        <span class="badge">Duration: 31556 ms</span>
+        <span class="badge">Status: failed</span>
+        <span class="badge category">UNKNOWN_FAILURE</span>
+        <span class="badge confidence">Confidence: 40%</span>
+        <span class="badge">Duration: 11084 ms</span>
     </div>
     
 <div class="root-cause">
     <strong>Recurring Failure:</strong>
-    <p>Yes. This failure has been seen before.</p>
-    <p><strong>Previous Occurrences:</strong> 11</p>
-    <p><strong>First Seen:</strong> 2026-06-21T12:25:10.875Z</p>
-    <p><strong>Last Seen:</strong> 2026-06-23T11:54:56.447Z</p>
+    <p>No. This looks like a new failure pattern.</p>
 </div>
-    
+        
     <div class="root-cause">
         <strong>Root Cause:</strong>
-        <p>Execution exceeded configured timeout.</p>
+        <p>Unable to determine root cause.</p>
     </div>
 
     <strong>Suggested Fixes:</strong>
     <ul>
-        <li>Review wait strategy</li>
-<li>Review navigation timing</li>
-<li>Investigate slow application response</li>
+        <li>Manual investigation required</li>
+<li>Add more failure patterns</li>
     </ul>
 
     <strong>Error Message:</strong>
     <div class="error">
-Test timeout of 30000ms exceeded.
+Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+Expected: &gt;= 1
+Received:    0
     </div>
 
 </div>
@@ -348,15 +340,15 @@ Test timeout of 30000ms exceeded.
         <span class="badge">Status: failed</span>
         <span class="badge category">LOCATOR_FAILURE</span>
         <span class="badge confidence">Confidence: 85%</span>
-        <span class="badge">Duration: 5804 ms</span>
+        <span class="badge">Duration: 15238 ms</span>
     </div>
     
 <div class="root-cause">
     <strong>Recurring Failure:</strong>
     <p>Yes. This failure has been seen before.</p>
-    <p><strong>Previous Occurrences:</strong> 11</p>
+    <p><strong>Previous Occurrences:</strong> 12</p>
     <p><strong>First Seen:</strong> 2026-06-21T12:25:10.875Z</p>
-    <p><strong>Last Seen:</strong> 2026-06-23T11:54:56.447Z</p>
+    <p><strong>Last Seen:</strong> 2026-06-23T11:58:19.195Z</p>
 </div>
     
     <div class="root-cause">

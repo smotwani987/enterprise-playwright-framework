@@ -1,0 +1,69 @@
+pipeline {
+    agent any
+
+    parameters {
+        choice(name: 'ENV', choices: ['qa', 'stage'], description: 'Select test environment')
+        choice(name: 'BROWSER', choices: ['chromium', 'firefox', 'webkit'], description: 'Select browser')
+        string(name: 'TEST_TAG', defaultValue: '@regression', description: 'Playwright tag to execute')
+    }
+
+    environment {
+        CI = 'true'
+        HEADLESS = 'true'
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm ci'
+            }
+        }
+
+        stage('Install Playwright Browsers') {
+            steps {
+                sh 'npx playwright install --with-deps'
+            }
+        }
+
+        stage('Run Playwright Tests') {
+            steps {
+                sh '''
+                echo "Environment: ${ENV}"
+                echo "Browser: ${BROWSER}"
+                echo "Tag: ${TEST_TAG}"
+
+                npx playwright test --project=${BROWSER} --grep "${TEST_TAG}"
+                '''
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'playwright-report/**, test-results/**', allowEmptyArchive: true
+
+            publishHTML(target: [
+                reportDir: 'playwright-report',
+                reportFiles: 'index.html',
+                reportName: 'Playwright HTML Report',
+                keepAll: true,
+                alwaysLinkToLastBuild: true,
+                allowMissing: true
+            ])
+        }
+
+        success {
+            echo 'Pipeline passed successfully.'
+        }
+
+        failure {
+            echo 'Pipeline failed. Check Playwright report, traces, screenshots, and videos.'
+        }
+    }
+}

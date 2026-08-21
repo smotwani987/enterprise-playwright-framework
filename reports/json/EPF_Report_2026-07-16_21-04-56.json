@@ -1,0 +1,235 @@
+{
+  "config": {
+    "argv": [
+      "/Users/sahilmotwani/.nvm/versions/node/v22.22.2/bin/node",
+      "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/ui/orangehrm/regression/TC05_verify-search-employee.spec.ts"
+    ],
+    "configFile": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/playwright.config.ts",
+    "rootDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/json/EPF_Report_2026-07-16_21-04-56.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 7,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "ui/orangehrm/regression/TC05_verify-search-employee.spec.ts",
+      "file": "ui/orangehrm/regression/TC05_verify-search-employee.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@regression Search Employee Tests",
+          "file": "ui/orangehrm/regression/TC05_verify-search-employee.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@smoke TC05_Search_Employee",
+              "ok": false,
+              "tags": [
+                "regression",
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 26907,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m0\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\n    at /Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/ui/orangehrm/regression/TC05_verify-search-employee.spec.ts:12:66",
+                        "location": {
+                          "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/ui/orangehrm/regression/TC05_verify-search-employee.spec.ts",
+                          "column": 66,
+                          "line": 12
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 10 |\u001b[39m         expect (\u001b[36mawait\u001b[39m poManager\u001b[33m.\u001b[39m\u001b[33mAdminPage\u001b[39m\u001b[33m.\u001b[39mverifyAdminPageTitle())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m         expect (\u001b[36mawait\u001b[39m poManager\u001b[33m.\u001b[39m\u001b[33mAdminPage\u001b[39m\u001b[33m.\u001b[39mtriggerEmployeeSearch())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m         expect (\u001b[36mawait\u001b[39m poManager\u001b[33m.\u001b[39m\u001b[33mAdminPage\u001b[39m\u001b[33m.\u001b[39mverifyTotalRowCount())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/ui/orangehrm/regression/TC05_verify-search-employee.spec.ts",
+                            "column": 66,
+                            "line": 12
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\n\n\u001b[0m \u001b[90m 10 |\u001b[39m         expect (\u001b[36mawait\u001b[39m poManager\u001b[33m.\u001b[39m\u001b[33mAdminPage\u001b[39m\u001b[33m.\u001b[39mverifyAdminPageTitle())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m         expect (\u001b[36mawait\u001b[39m poManager\u001b[33m.\u001b[39m\u001b[33mAdminPage\u001b[39m\u001b[33m.\u001b[39mtriggerEmployeeSearch())\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m         expect (\u001b[36mawait\u001b[39m poManager\u001b[33m.\u001b[39m\u001b[33mAdminPage\u001b[39m\u001b[33m.\u001b[39mverifyTotalRowCount())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/ui/orangehrm/regression/TC05_verify-search-employee.spec.ts:12:66\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Total Rows: 0\n"
+                        },
+                        {
+                          "text": "++++++++++++++Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\n"
+                        },
+                        {
+                          "text": "--------------++++++++++++++Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\n    at /Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/ui/orangehrm/regression/TC05_verify-search-employee.spec.ts:12:66\n"
+                        },
+                        {
+                          "text": "=== SEARCH TEXT ===\n"
+                        },
+                        {
+                          "text": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\nError: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\n    at /Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/ui/orangehrm/regression/TC05_verify-search-employee.spec.ts:12:66\n"
+                        },
+                        {
+                          "text": "===================\n"
+                        },
+                        {
+                          "text": "=== RETRIEVED KNOWLEDGE ===\n"
+                        },
+                        {
+                          "text": "{ rootCause: \u001b[32m'Unknown'\u001b[39m, fix: \u001b[32m'Manual analysis required'\u001b[39m }\n"
+                        },
+                        {
+                          "text": "===========================\n"
+                        },
+                        {
+                          "text": "LM Studio response received\n"
+                        },
+                        {
+                          "text": "========== AI RESPONSE ==========\n"
+                        },
+                        {
+                          "text": "<think>\n\n</think>\n\n{\n  \"rootCause\": \"No employee found matching the search criteria\",\n  \"fix\": \"Verify search input and filter parameters\",\n  \"confidence\": 85\n}\n"
+                        },
+                        {
+                          "text": "=================================\n"
+                        },
+                        {
+                          "text": "AI Analysis: 2.092s\n"
+                        },
+                        {
+                          "text": "ANALYSIS RECEIVED\n"
+                        },
+                        {
+                          "text": "========== AI RCA ==========\n"
+                        },
+                        {
+                          "text": "Root Cause: No employee found matching the search criteria\n"
+                        },
+                        {
+                          "text": "Fix: Verify search input and filter parameters\n"
+                        },
+                        {
+                          "text": "Confidence: \u001b[33m85\u001b[39m\n"
+                        },
+                        {
+                          "text": "============================\n"
+                        },
+                        {
+                          "text": "Creating AI analysis directory...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-07-16T15:34:56.841Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results/ui-orangehrm-regression-TC-3b158--smoke-TC05-Search-Employee-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results/ui-orangehrm-regression-TC-3b158--smoke-TC05-Search-Employee-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/ui/orangehrm/regression/TC05_verify-search-employee.spec.ts",
+                        "column": 66,
+                        "line": 12
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f372c0b2f53ec77c2df5-bcc558d505bffc0ef52d",
+              "file": "ui/orangehrm/regression/TC05_verify-search-employee.spec.ts",
+              "line": 6,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-16T15:34:56.586Z",
+    "duration": 28041.41,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

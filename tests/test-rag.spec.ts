@@ -6,7 +6,7 @@ test('RAG Retrieval Test', async () => {
 
   const result =
     await retriever.findRelevantKnowledge(
-      'Locator not found'
+      'LOCATOR_FAILURE'
     );
 
   console.log(result);

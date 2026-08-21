@@ -1,0 +1,164 @@
+{
+  "config": {
+    "argv": [
+      "/Users/sahilmotwani/.nvm/versions/node/v22.22.2/bin/node",
+      "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/node_modules/.bin/playwright",
+      "test",
+      "tests/test-rag.spec.ts"
+    ],
+    "configFile": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/playwright.config.ts",
+    "rootDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/json/EPF_Report_2026-07-19_15-53-32.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 7,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "test-rag.spec.ts",
+      "file": "test-rag.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "RAG Retrieval Test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'toLowerCase')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'toLowerCase')\n    at KnowledgeRetriever.findRelevantKnowledge (/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/ai/retrieval/KnowledgeRetriever.ts:16:63)\n    at /Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/test-rag.spec.ts:8:5",
+                    "location": {
+                      "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/ai/retrieval/KnowledgeRetriever.ts",
+                      "column": 63,
+                      "line": 16
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../ai/retrieval/KnowledgeRetriever.ts:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m'Checking pattern:'\u001b[39m\u001b[33m,\u001b[39m entry\u001b[33m.\u001b[39mpattern)\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mif\u001b[39m (errorMessage\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m.\u001b[39mincludes(entry\u001b[33m.\u001b[39mpattern\u001b[33m.\u001b[39mtoLowerCase())) {\n \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m          console\u001b[33m.\u001b[39mlog(\u001b[32m'MATCH FOUND:'\u001b[39m\u001b[33m,\u001b[39m entry\u001b[33m.\u001b[39mpattern)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m           \u001b[36mreturn\u001b[39m \u001b[32m`\u001b[39m\n \u001b[90m 19 |\u001b[39m \u001b[32m          Pattern: ${entry.pattern} \u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/ai/retrieval/KnowledgeRetriever.ts",
+                        "column": 63,
+                        "line": 16
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'toLowerCase')\n\n\u001b[90m   at \u001b[39m../ai/retrieval/KnowledgeRetriever.ts:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m'Checking pattern:'\u001b[39m\u001b[33m,\u001b[39m entry\u001b[33m.\u001b[39mpattern)\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mif\u001b[39m (errorMessage\u001b[33m.\u001b[39mtoLowerCase()\u001b[33m.\u001b[39mincludes(entry\u001b[33m.\u001b[39mpattern\u001b[33m.\u001b[39mtoLowerCase())) {\n \u001b[90m    |\u001b[39m                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m          console\u001b[33m.\u001b[39mlog(\u001b[32m'MATCH FOUND:'\u001b[39m\u001b[33m,\u001b[39m entry\u001b[33m.\u001b[39mpattern)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m           \u001b[36mreturn\u001b[39m \u001b[32m`\u001b[39m\n \u001b[90m 19 |\u001b[39m \u001b[32m          Pattern: ${entry.pattern} \u001b[39m\u001b[0m\n\u001b[2m    at KnowledgeRetriever.findRelevantKnowledge (/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/ai/retrieval/KnowledgeRetriever.ts:16:63)\u001b[22m\n\u001b[2m    at /Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests/test-rag.spec.ts:8:5\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Searching for: LOCATOR_FAILURE\n"
+                    },
+                    {
+                      "text": "Checking pattern: Expected status 200\n"
+                    },
+                    {
+                      "text": "Checking pattern: \u001b[90mundefined\u001b[39m\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-19T10:23:32.577Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results/test-rag-RAG-Retrieval-Test-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/ai/retrieval/KnowledgeRetriever.ts",
+                    "column": 63,
+                    "line": 16
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9c79316cea7aecd80d44-22db97f5b2a27b9852fd",
+          "file": "test-rag.spec.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-19T10:23:32.414Z",
+    "duration": 187.45100000000002,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

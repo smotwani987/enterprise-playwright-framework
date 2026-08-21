@@ -23,9 +23,9 @@
       "Review navigation timing",
       "Investigate slow application response"
     ],
-    "occurrenceCount": 12,
+    "occurrenceCount": 13,
     "firstSeen": "2026-06-21T12:25:10.875Z",
-    "lastSeen": "2026-06-23T11:58:19.195Z"
+    "lastSeen": "2026-07-16T15:28:55.274Z"
   },
   {
     "testName": "@smoke TC03 - Verify My Action Widget Visibility",
@@ -65,9 +65,9 @@
       "Use page.waitForURL() for expected route changes",
       "Avoid asserting dashboard elements immediately after login submit"
     ],
-    "occurrenceCount": 12,
+    "occurrenceCount": 13,
     "firstSeen": "2026-06-21T12:25:10.875Z",
-    "lastSeen": "2026-06-23T11:58:19.195Z"
+    "lastSeen": "2026-07-16T15:28:55.274Z"
   },
   {
     "testName": "@api Get Booking Details",
@@ -82,5 +82,45 @@
     "occurrenceCount": 6,
     "firstSeen": "2026-06-21T12:48:25.041Z",
     "lastSeen": "2026-06-23T11:58:19.195Z"
+  },
+  {
+    "testName": "RAG Retrieval Test",
+    "category": "UNKNOWN_FAILURE",
+    "errorSignature": "RAG Retrieval Test::UNKNOWN_FAILURE::Unable to determine root cause.",
+    "rootCause": "Unable to determine root cause.",
+    "suggestedFixes": [
+      "Manual investigation required",
+      "Add more failure patterns"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-07-16T15:28:55.274Z",
+    "lastSeen": "2026-07-16T15:28:55.274Z"
+  },
+  {
+    "testName": "@smoke TC03 - Verify My Action Widget Visibility",
+    "category": "LOCATOR_FAILURE",
+    "errorSignature": "@smoke TC03 - Verify My Action Widget Visibility::LOCATOR_FAILURE::Page navigation did not complete before the test attempted validation or interaction.",
+    "rootCause": "Page navigation did not complete before the test attempted validation or interaction.",
+    "suggestedFixes": [
+      "Wait for page navigation to complete before interacting with elements",
+      "Use page.waitForURL() for expected route changes",
+      "Avoid asserting dashboard elements immediately after login submit"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-07-16T15:28:55.274Z",
+    "lastSeen": "2026-07-16T15:28:55.274Z"
+  },
+  {
+    "testName": "@smoke TC05_Search_Employee",
+    "category": "UNKNOWN_FAILURE",
+    "errorSignature": "@smoke TC05_Search_Employee::UNKNOWN_FAILURE::Unable to determine root cause.",
+    "rootCause": "Unable to determine root cause.",
+    "suggestedFixes": [
+      "Manual investigation required",
+      "Add more failure patterns"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-07-16T15:28:55.274Z",
+    "lastSeen": "2026-07-16T15:28:55.274Z"
   }
 ]

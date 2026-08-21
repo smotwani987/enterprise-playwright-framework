@@ -1,0 +1,143 @@
+{
+  "config": {
+    "argv": [
+      "/Users/sahilmotwani/.nvm/versions/node/v22.22.2/bin/node",
+      "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/node_modules/.bin/playwright",
+      "test",
+      "dynamicTables.spec.ts"
+    ],
+    "configFile": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/playwright.config.ts",
+    "rootDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/auth/auth.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/json/EPF_Report_2026-08-03_18-26-55.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 7,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "ui/practise/dynamicTables.spec.ts",
+      "file": "ui/practise/dynamicTables.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@OneOff Dynamic tables",
+          "file": "ui/practise/dynamicTables.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@OneOffTC01",
+              "ok": true,
+              "tags": [
+                "OneOff",
+                "OneOffTC01"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3256,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\u001b[33m5\u001b[39m\n"
+                        },
+                        {
+                          "text": "[\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'                                Name\\n'\u001b[39m +\n    \u001b[32m'                                Disk\\n'\u001b[39m +\n    \u001b[32m'                                Memory\\n'\u001b[39m +\n    \u001b[32m'                                Network\\n'\u001b[39m +\n    \u001b[32m'                                CPU\\n'\u001b[39m +\n    \u001b[32m'                            '\u001b[39m,\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'                                Internet Explorer\\n'\u001b[39m +\n    \u001b[32m'                                0.2 MB/s\\n'\u001b[39m +\n    \u001b[32m'                                6.1 MB\\n'\u001b[39m +\n    \u001b[32m'                                3.1 Mbps\\n'\u001b[39m +\n    \u001b[32m'                                0.9%\\n'\u001b[39m +\n    \u001b[32m'                            '\u001b[39m,\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'                                System\\n'\u001b[39m +\n    \u001b[32m'                                0.2 MB/s\\n'\u001b[39m +\n    \u001b[32m'                                74.9 MB\\n'\u001b[39m +\n    \u001b[32m'                                8.1 Mbps\\n'\u001b[39m +\n    \u001b[32m'                                3.6%\\n'\u001b[39m +\n    \u001b[32m'                            '\u001b[39m,\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'                                Chrome\\n'\u001b[39m +\n    \u001b[32m'                                0.7 MB/s\\n'\u001b[39m +\n    \u001b[32m'                                73.8 MB\\n'\u001b[39m +\n    \u001b[32m'                                4.9 Mbps\\n'\u001b[39m +\n    \u001b[32m'                                8.6%\\n'\u001b[39m +\n    \u001b[32m'                            '\u001b[39m,\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'                                Firefox\\n'\u001b[39m +\n    \u001b[32m'                                0.3 MB/s\\n'\u001b[39m +\n    \u001b[32m'                                60.7 MB\\n'\u001b[39m +\n    \u001b[32m'                                8.6 Mbps\\n'\u001b[39m +\n    \u001b[32m'                                5.3%\\n'\u001b[39m +\n    \u001b[32m'                            '\u001b[39m\n]\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-03T12:56:56.182Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f48af40e08204801367f-e9c581f95fccc76f2179",
+              "file": "ui/practise/dynamicTables.spec.ts",
+              "line": 6,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-03T12:56:55.950Z",
+    "duration": 3845.1200000000003,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

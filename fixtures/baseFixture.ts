@@ -1,6 +1,7 @@
 import {test as base,BrowserContext, Page} from '@playwright/test';
-import {POManager} from '../pages/orangehrm/POManager';
+import {POManager} from '../pages/POManager';
 import { AIFailureAnalyzer } from '../ai/analyzer/AIFailureAnalyzer';
+import path from 'path';
 
 type myFixtures={
 context: BrowserContext;
@@ -8,11 +9,16 @@ page: Page;
 poManager: POManager;
 }
 
+const storageStatePath = path.resolve(__dirname, '../auth/storageState.json');
+
 export const test=base.extend<myFixtures>({
   context: async({browser},use)=>{
     const context=await browser.newContext({
       viewport: { width: 1920, height: 1080 },
-      ignoreHTTPSErrors: true
+      ignoreHTTPSErrors: true,
+      ...(process.env.ENABLE_AUTH === 'true'
+      ? { storageState: storageStatePath }
+      : {})
     })
     await use(context);
     await context.close();

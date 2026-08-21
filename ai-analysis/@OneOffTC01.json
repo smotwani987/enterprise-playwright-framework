@@ -1,0 +1,5 @@
+{
+  "rootCause": "Corrupted or incomplete JSON file",
+  "fix": "Check and repair the ./auth/storageState.json file",
+  "confidence": 90
+}

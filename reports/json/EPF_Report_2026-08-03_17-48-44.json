@@ -1,0 +1,227 @@
+{
+  "config": {
+    "argv": [
+      "/Users/sahilmotwani/.nvm/versions/node/v22.22.2/bin/node",
+      "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/node_modules/.bin/playwright",
+      "test",
+      "dynamicTables.spec.ts"
+    ],
+    "configFile": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/playwright.config.ts",
+    "rootDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/auth/auth.setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/json/EPF_Report_2026-08-03_17-48-44.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.1",
+    "workers": 7,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "ui/practise/dynamicTables.spec.ts",
+      "file": "ui/practise/dynamicTables.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "@OneOff Dynamic tables",
+          "file": "ui/practise/dynamicTables.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "@OneOffTC01",
+              "ok": false,
+              "tags": [
+                "OneOff",
+                "OneOffTC01"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3277,
+                      "error": {
+                        "message": "SyntaxError: Error reading storage state from ./auth/storageState.json:\nUnexpected end of JSON input",
+                        "stack": "SyntaxError: Error reading storage state from ./auth/storageState.json:\nUnexpected end of JSON input\n    at Object.context (/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/fixtures/baseFixture.ts:16:19)",
+                        "location": {
+                          "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/fixtures/baseFixture.ts",
+                          "column": 19,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../fixtures/baseFixture.ts:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m test\u001b[33m=\u001b[39mbase\u001b[33m.\u001b[39mextend\u001b[33m<\u001b[39m\u001b[33mmyFixtures\u001b[39m\u001b[33m>\u001b[39m({\n \u001b[90m 15 |\u001b[39m   context\u001b[33m:\u001b[39m \u001b[36masync\u001b[39m({browser}\u001b[33m,\u001b[39muse)\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mconst\u001b[39m context\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewContext({\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m       viewport\u001b[33m:\u001b[39m { width\u001b[33m:\u001b[39m \u001b[35m1920\u001b[39m\u001b[33m,\u001b[39m height\u001b[33m:\u001b[39m \u001b[35m1080\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 18 |\u001b[39m       ignoreHTTPSErrors\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 19 |\u001b[39m       \u001b[33m...\u001b[39m(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mENABLE_AUTH\u001b[39m \u001b[33m===\u001b[39m \u001b[32m'true'\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/fixtures/baseFixture.ts",
+                            "column": 19,
+                            "line": 16
+                          },
+                          "message": "SyntaxError: Error reading storage state from ./auth/storageState.json:\nUnexpected end of JSON input\n\n\u001b[90m   at \u001b[39m../fixtures/baseFixture.ts:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m test\u001b[33m=\u001b[39mbase\u001b[33m.\u001b[39mextend\u001b[33m<\u001b[39m\u001b[33mmyFixtures\u001b[39m\u001b[33m>\u001b[39m({\n \u001b[90m 15 |\u001b[39m   context\u001b[33m:\u001b[39m \u001b[36masync\u001b[39m({browser}\u001b[33m,\u001b[39muse)\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m     \u001b[36mconst\u001b[39m context\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewContext({\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m       viewport\u001b[33m:\u001b[39m { width\u001b[33m:\u001b[39m \u001b[35m1920\u001b[39m\u001b[33m,\u001b[39m height\u001b[33m:\u001b[39m \u001b[35m1080\u001b[39m }\u001b[33m,\u001b[39m\n \u001b[90m 18 |\u001b[39m       ignoreHTTPSErrors\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 19 |\u001b[39m       \u001b[33m...\u001b[39m(process\u001b[33m.\u001b[39menv\u001b[33m.\u001b[39m\u001b[33mENABLE_AUTH\u001b[39m \u001b[33m===\u001b[39m \u001b[32m'true'\u001b[39m\u001b[0m\n\u001b[2m    at Object.context (/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/fixtures/baseFixture.ts:16:19)\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "++++++++++++++SyntaxError: Error reading storage state from ./auth/storageState.json:\nUnexpected end of JSON input\n"
+                        },
+                        {
+                          "text": "--------------++++++++++++++SyntaxError: Error reading storage state from ./auth/storageState.json:\nUnexpected end of JSON input\n    at Object.context (/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/fixtures/baseFixture.ts:16:19)\n"
+                        },
+                        {
+                          "text": "=== SEARCH TEXT ===\n"
+                        },
+                        {
+                          "text": "SyntaxError: Error reading storage state from ./auth/storageState.json:\nUnexpected end of JSON input\nSyntaxError: Error reading storage state from ./auth/storageState.json:\nUnexpected end of JSON input\n    at Object.context (/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/fixtures/baseFixture.ts:16:19)\n"
+                        },
+                        {
+                          "text": "===================\n"
+                        },
+                        {
+                          "text": "=== RETRIEVED KNOWLEDGE ===\n"
+                        },
+                        {
+                          "text": "{ rootCause: \u001b[32m'Unknown'\u001b[39m, fix: \u001b[32m'Manual analysis required'\u001b[39m }\n"
+                        },
+                        {
+                          "text": "===========================\n"
+                        },
+                        {
+                          "text": "LM Studio response received\n"
+                        },
+                        {
+                          "text": "========== AI RESPONSE ==========\n"
+                        },
+                        {
+                          "text": "{\n  \"rootCause\": \"Corrupted or incomplete JSON file\",\n  \"fix\": \"Check and repair the ./auth/storageState.json file\",\n  \"confidence\": 90\n}\n"
+                        },
+                        {
+                          "text": "=================================\n"
+                        },
+                        {
+                          "text": "AI Analysis: 3.273s\n"
+                        },
+                        {
+                          "text": "ANALYSIS RECEIVED\n"
+                        },
+                        {
+                          "text": "========== AI RCA ==========\n"
+                        },
+                        {
+                          "text": "Root Cause: Corrupted or incomplete JSON file\n"
+                        },
+                        {
+                          "text": "Fix: Check and repair the ./auth/storageState.json file\n"
+                        },
+                        {
+                          "text": "Confidence: \u001b[33m90\u001b[39m\n"
+                        },
+                        {
+                          "text": "============================\n"
+                        },
+                        {
+                          "text": "Creating AI analysis directory...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-03T12:18:44.637Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/test-results/ui-practise-dynamicTables--OneOff-Dynamic-tables-OneOffTC01-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/sahilmotwani/Downloads/Playwright Attempts/enterprise-playwright-framework/enterprise-playwright-framework/fixtures/baseFixture.ts",
+                        "column": 19,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f48af40e08204801367f-e9c581f95fccc76f2179",
+              "file": "ui/practise/dynamicTables.spec.ts",
+              "line": 6,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-03T12:18:44.432Z",
+    "duration": 4208.5199999999995,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

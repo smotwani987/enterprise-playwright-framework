@@ -8,11 +8,11 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "types": ["node"],
+    "types": ["node", "@playwright/test"],
     "isolatedModules": true,
     "noEmit": true,
     "baseUrl": ".",
-    "ignoreDeprecations": "6.0"
+    "ignoreDeprecations": "6.0",
   },
-  "include": ["tests", "fixtures", "pages", "helpers", "ai", "playwright.config.ts", "types/test-rag.spec.ts"]
+  "include": ["tests", "fixtures","utils", "pages","auth", "helpers", "ai", "playwright.config.ts", "types/test-rag.spec.ts"]
 }

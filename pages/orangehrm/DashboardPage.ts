@@ -19,7 +19,7 @@ export class DashboardPage {
 
   async verifyMyActionWidget() {
     try{
-        await this.page.getByRole('region', { name: 'My Actions' })
+        await this.page.getByText('My Actions');
     }catch(error){
       if(error instanceof errors.TimeoutError){
         console.log('Element was not found on the page within the timeout.');
@@ -30,7 +30,7 @@ export class DashboardPage {
     );
     }
     
-    return (await this.page.getByRole('region', { name: 'My Actions' }));
+    return (await this.page.getByText('My Actions'));
   }
 
 }

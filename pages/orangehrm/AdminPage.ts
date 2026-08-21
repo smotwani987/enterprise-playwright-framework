@@ -38,13 +38,14 @@ export class AdminPage {
     await this.userRoleDD.click();
     await this.adminDDValue.waitFor({ state: 'visible', timeout: 5000 });
     await this.adminDDValue.click();
-    await this.searchBtn.click();
-
+    
     await Promise.all([
+      await this.searchBtn.click(),
       this.page.waitForResponse(
         response => response.url().includes('/api/v2/admin/users') && response.status() === 200,
-        { timeout: 20000 } // Adjust maximum wait time if needed
-      )
+        { timeout: 30000 } // Adjust maximum wait time if needed
+      ),
+      await this.page.waitForLoadState('networkidle')
     ]);
     const updatedRows = this.page.locator('.orangehrm-container');
     return updatedRows;
