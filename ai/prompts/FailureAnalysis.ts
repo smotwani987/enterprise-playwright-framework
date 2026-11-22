@@ -1,4 +1,6 @@
 import { FailureContext } from "../models/FailureContext";
+import { FailureTest } from "../models/FailureTest";
+import { FailureCategory } from "../models/FailureCategory";
 
 export const buildFailurePrompt = (
   context: FailureContext, knowledge:string): string => `

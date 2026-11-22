@@ -23,9 +23,9 @@
       "Review navigation timing",
       "Investigate slow application response"
     ],
-    "occurrenceCount": 13,
+    "occurrenceCount": 14,
     "firstSeen": "2026-06-21T12:25:10.875Z",
-    "lastSeen": "2026-07-16T15:28:55.274Z"
+    "lastSeen": "2026-08-27T03:11:29.481Z"
   },
   {
     "testName": "@smoke TC03 - Verify My Action Widget Visibility",
@@ -51,9 +51,9 @@
       "Review navigation timing",
       "Investigate slow application response"
     ],
-    "occurrenceCount": 12,
+    "occurrenceCount": 13,
     "firstSeen": "2026-06-21T12:25:10.875Z",
-    "lastSeen": "2026-06-23T11:58:19.195Z"
+    "lastSeen": "2026-08-27T03:11:29.481Z"
   },
   {
     "testName": "TC10 - Verify My Action Widget Visibility",
@@ -92,9 +92,9 @@
       "Manual investigation required",
       "Add more failure patterns"
     ],
-    "occurrenceCount": 1,
+    "occurrenceCount": 2,
     "firstSeen": "2026-07-16T15:28:55.274Z",
-    "lastSeen": "2026-07-16T15:28:55.274Z"
+    "lastSeen": "2026-08-27T03:11:29.480Z"
   },
   {
     "testName": "@smoke TC03 - Verify My Action Widget Visibility",
@@ -122,5 +122,143 @@
     "occurrenceCount": 1,
     "firstSeen": "2026-07-16T15:28:55.274Z",
     "lastSeen": "2026-07-16T15:28:55.274Z"
+  },
+  {
+    "testName": "RAG Retrieval",
+    "category": "UNKNOWN_FAILURE",
+    "errorSignature": "RAG Retrieval::UNKNOWN_FAILURE::Unable to determine root cause.",
+    "rootCause": "Unable to determine root cause.",
+    "suggestedFixes": [
+      "Manual investigation required",
+      "Add more failure patterns"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-08-27T03:11:29.481Z",
+    "lastSeen": "2026-08-27T03:11:29.481Z"
+  },
+  {
+    "testName": "@smoke TC02 - Verify Logout",
+    "category": "TIMEOUT_FAILURE",
+    "errorSignature": "@smoke TC02 - Verify Logout::TIMEOUT_FAILURE::Execution exceeded configured timeout.",
+    "rootCause": "Execution exceeded configured timeout.",
+    "suggestedFixes": [
+      "Review wait strategy",
+      "Review navigation timing",
+      "Investigate slow application response"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-08-27T03:11:29.481Z",
+    "lastSeen": "2026-08-27T03:11:29.481Z"
+  },
+  {
+    "testName": "@smoke TC03 - Verify My Action Widget Visibility",
+    "category": "TIMEOUT_FAILURE",
+    "errorSignature": "@smoke TC03 - Verify My Action Widget Visibility::TIMEOUT_FAILURE::Execution exceeded configured timeout.",
+    "rootCause": "Execution exceeded configured timeout.",
+    "suggestedFixes": [
+      "Review wait strategy",
+      "Review navigation timing",
+      "Investigate slow application response"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-08-27T03:11:29.481Z",
+    "lastSeen": "2026-08-27T03:11:29.481Z"
+  },
+  {
+    "testName": "@smoke TC04_Navigate_to_Admin page",
+    "category": "TIMEOUT_FAILURE",
+    "errorSignature": "@smoke TC04_Navigate_to_Admin page::TIMEOUT_FAILURE::Execution exceeded configured timeout.",
+    "rootCause": "Execution exceeded configured timeout.",
+    "suggestedFixes": [
+      "Review wait strategy",
+      "Review navigation timing",
+      "Investigate slow application response"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-08-27T03:11:29.481Z",
+    "lastSeen": "2026-08-27T03:11:29.481Z"
+  },
+  {
+    "testName": "@smoke TC05_Search_Employee",
+    "category": "TIMEOUT_FAILURE",
+    "errorSignature": "@smoke TC05_Search_Employee::TIMEOUT_FAILURE::Execution exceeded configured timeout.",
+    "rootCause": "Execution exceeded configured timeout.",
+    "suggestedFixes": [
+      "Review wait strategy",
+      "Review navigation timing",
+      "Investigate slow application response"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-08-27T03:11:29.481Z",
+    "lastSeen": "2026-08-27T03:11:29.481Z"
+  },
+  {
+    "testName": "@smokeTC06 - Verify Login",
+    "category": "TIMEOUT_FAILURE",
+    "errorSignature": "@smokeTC06 - Verify Login::TIMEOUT_FAILURE::Execution exceeded configured timeout.",
+    "rootCause": "Execution exceeded configured timeout.",
+    "suggestedFixes": [
+      "Review wait strategy",
+      "Review navigation timing",
+      "Investigate slow application response"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-08-27T03:11:29.481Z",
+    "lastSeen": "2026-08-27T03:11:29.481Z"
+  },
+  {
+    "testName": "TC08 - Verify Login",
+    "category": "TIMEOUT_FAILURE",
+    "errorSignature": "TC08 - Verify Login::TIMEOUT_FAILURE::Execution exceeded configured timeout.",
+    "rootCause": "Execution exceeded configured timeout.",
+    "suggestedFixes": [
+      "Review wait strategy",
+      "Review navigation timing",
+      "Investigate slow application response"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-08-27T03:11:29.481Z",
+    "lastSeen": "2026-08-27T03:11:29.481Z"
+  },
+  {
+    "testName": "TC09 - Verify Logout",
+    "category": "TIMEOUT_FAILURE",
+    "errorSignature": "TC09 - Verify Logout::TIMEOUT_FAILURE::Execution exceeded configured timeout.",
+    "rootCause": "Execution exceeded configured timeout.",
+    "suggestedFixes": [
+      "Review wait strategy",
+      "Review navigation timing",
+      "Investigate slow application response"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-08-27T03:11:29.481Z",
+    "lastSeen": "2026-08-27T03:11:29.481Z"
+  },
+  {
+    "testName": "TC10 - Verify My Action Widget Visibility",
+    "category": "TIMEOUT_FAILURE",
+    "errorSignature": "TC10 - Verify My Action Widget Visibility::TIMEOUT_FAILURE::Execution exceeded configured timeout.",
+    "rootCause": "Execution exceeded configured timeout.",
+    "suggestedFixes": [
+      "Review wait strategy",
+      "Review navigation timing",
+      "Investigate slow application response"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-08-27T03:11:29.481Z",
+    "lastSeen": "2026-08-27T03:11:29.481Z"
+  },
+  {
+    "testName": "TC11_Navigate_to_Admin page",
+    "category": "UNKNOWN_FAILURE",
+    "errorSignature": "TC11_Navigate_to_Admin page::UNKNOWN_FAILURE::Unable to determine root cause.",
+    "rootCause": "Unable to determine root cause.",
+    "suggestedFixes": [
+      "Manual investigation required",
+      "Add more failure patterns"
+    ],
+    "occurrenceCount": 1,
+    "firstSeen": "2026-08-27T03:11:29.481Z",
+    "lastSeen": "2026-08-27T03:11:29.481Z"
   }
 ]

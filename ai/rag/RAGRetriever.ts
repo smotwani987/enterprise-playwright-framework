@@ -3,18 +3,27 @@ import { VectorStore } from "./VectorStore";
 
 export class RAGRetriever {
 
-    private vectorStore = new VectorStore();
+    private readonly vectorStore: VectorStore;
 
-    async initialize() {
+    constructor() {
+        this.vectorStore = new VectorStore();
+    }
+
+    async initialize(): Promise<void> {
         await this.vectorStore.initialize();
     }
 
-    async retrieve(query: string): Promise<string[]> {
+    async retrieve(
+        query: string,
+        topK: number = 3
+    ): Promise<string[]> {
 
-        const embedding = await EmbeddingService.generateEmbedding(query);
+        const embedding =
+            await EmbeddingService.generateEmbedding(query);
 
-        const result = await this.vectorStore.search(embedding);
-
-        return (result.documents?.[0] ?? []).filter((doc): doc is string => doc !== null);
+        return await this.vectorStore.search(
+            embedding,
+            topK
+        );
     }
 }
